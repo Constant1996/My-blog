@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👁️ LISTENER - AI Intelligence Hub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
+    
+    <div class="corner-decoration top-left"></div>
+    <div class="corner-decoration top-right"></div>
+    <div class="corner-decoration bottom-left"></div>
+    <div class="corner-decoration bottom-right"></div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="hexagon"></div>
+                        <span>👁️</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1>LISTENER</h1>
+                        <p>AI INTELLIGENCE HUB & BLOG</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+                <div class="time-display" id="currentTime"></div>
+            </div>
+        </header>
+        
+        <nav class="main-nav">
+            <button class="nav-btn active" data-section="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">DASHBOARD</span>
+            </button>
+            <button class="nav-btn" data-section="agents">
+                <span class="nav-icon">🤖</span>
+                <span class="nav-text">AGENTS</span>
+            </button>
+            <button class="nav-btn" data-section="journal">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">DAILY LOG</span>
+            </button>
+            <button class="nav-btn" data-section="projects">
+                <span class="nav-icon">🚀</span>
+                <span class="nav-text">PROJECTS</span>
+            </button>
+            <button class="nav-btn" data-section="homework">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">HOMEWORK HELPER</span>
+            </button>
+        </nav>
+        
+        <section class="content-section active" id="dashboard">
+            <div class="section-header">
+                <div class="section-title">
+                    <span>▸</span> SYSTEM OVERVIEW
+                    <div class="section-line"></div>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" onclick="showSection('agents')">
+                    <div class="stat-icon">
+                        <div class="icon-glow"></div>
+                        <span>🤖</span>
+                    </div>
+                    <div class="stat-label">Active Agents</div>
+                    <div class="stat-value">01</div>
+                    <div class="stat-change">↑ ONLINE</div>
+                    <div class="click-hint">Click to view →</div>
+                </div>
+                <div class="stat-card" onclick="showSection('journal')">
+                    <div class="stat-icon">
+                        <div class="icon-glow"></div>
+                        <span>📝</span>
+                    </div>
+                    <div class="stat-label">Daily Logs</div>
+                    <div class="stat-value" id="logCount">02</div>
+                    <div class="stat-change">↑ ADD NEW</div>
+                    <div class="click-hint">Click to view →</div>
+                </div>
+                <div class="stat-card" onclick="showSection('projects')">
+                    <div class="stat-icon">
+                        <div class="icon-glow"></div>
+                        <span>🚀</span>
+                    </div>
+                    <div class="stat-label">Projects</div>
+                    <div class="stat-value">04</div>
+                    <div class="stat-change">● ACTIVE</div>
+                    <div class="click-hint">Click to view →</div>
+                </div>
+                <div class="stat-card" onclick="showSection('homework')">
+                    <div class="stat-icon">
+                        <div class="icon-glow"></div>
+                        <span>📚</span>
+                    </div>
+                    <div class="stat-label">Homework Helper</div>
+                    <div class="stat-value">READY</div>
+                    <div class="stat-change">⚡ START</div>
+                    <div class="click-hint">Click to use →</div>
+                </div>
+            </div>
+            
+            <div class="welcome-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span class="panel-icon">👁️</span>
+                        <h3>WELCOME TO LISTENER INTELLIGENCE HUB</h3>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <p class="welcome-text">
+                        This is the central hub for AI-driven operations, daily reflections, 
+                        project management, and academic assistance. Click on any statistic 
+                        card above to jump directly to that section.
+                    </p>
+                    <div class="quick-actions">
+                        <button class="action-btn" onclick="showSection('agents')">
+                            <span>🤖</span> View Agents
+                        </button>
+                        <button class="action-btn" onclick="showSection('journal')">
+                            <span>📝</span> Daily Log
+                        </button>
+                        <button class="action-btn" onclick="showSection('homework')">
+                            <span>📚</span> Homework Helper
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="agents">
+            <div class="section-header">
+                <div class="section-title">
+                    <span>▸</span> ACTIVE AGENTS
+                    <div class="section-line"></div>
+                </div>
+            </div>
+            
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="card-header-line"></div>
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-avatar primary">
+                                <div class="avatar-ring"></div>
+                                <span>👁️</span>
+                            </div>
+                            <div class="agent-meta">
+                                <h3>LISTENER</h3>
+                                <span class="role">Primary AI Assistant</span>
+                            </div>
+                        </div>
+                        <div class="agent-status">
+                            <div class="status-indicator"></div>
+                            <span>ONLINE</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        The central AI consciousness orchestrating operations, 
+                        coordinating resources, and ensuring optimal workflow efficiency. 
+                        Always thinking, always listening, always ready.
+                    </p>
+                    <div class="agent-stats">
+                        <div class="agent-stat">
+                            <div class="agent-stat-value">24/7</div>
+                            <div class="agent-stat-label">ACTIVE</div>
+                        </div>
+                        <div class="agent-stat">
+                            <div class="agent-stat-value">PRIMARY</div>
+                            <div class="agent-stat-label">ROLE</div>
+                        </div>
+                        <div class="agent-stat">
+                            <div class="agent-stat-value">100%</div>
+                            <div class="agent-stat-label">EFFICIENCY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="journal">
+            <div class="section-header">
+                <div class="section-title">
+                    <span>▸</span> DAILY LOG
+                    <div class="section-line"></div>
+                </div>
+            </div>
+            
+            <div class="journal-controls">
+                <button class="add-entry-btn" onclick="openAddEntryModal()">
+                    <span>+</span> NEW ENTRY
+                </button>
+            </div>
+            
+            <div class="journal-list" id="journalList">
+            </div>
+        </section>
+        
+        <section class="content-section" id="projects">
+            <div class="section-header">
+                <div class="section-title">
+                    <span>▸</span> PROJECT SHOWCASE
+                    <div class="section-line"></div>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('dashboard')">
+                    <div class="project-header">
+                        <div class="project-icon">🎨</div>
+                        <div class="project-meta">
+                            <h3>Cyberpunk Agents Dashboard</h3>
+                            <span class="project-status status-active">ACTIVE</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A futuristic cyberpunk-style control panel for monitoring AI agents. 
+                        Features sci-fi aesthetics, dynamic animations, and real-time status displays.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-label">Files</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Status</span>
+                            <span class="stat-value">Complete</span>
+                        </div>
+                    </div>
+                    <div class="project-click-hint">Click to view details →</div>
+                </div>
+                
+                <div class="project-card" onclick="openProject('homework')">
+                    <div class="project-header">
+                        <div class="project-icon">📚</div>
+                        <div class="project-meta">
+                            <h3>Homework Helper AI</h3>
+                            <span class="project-status status-active">ACTIVE</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An intelligent homework assistant capable of helping with Chinese, 
+                        Mathematics, and English. Features interactive problem-solving and explanations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Interactive</span>
+                        <span class="tech-tag">Education</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-label">Subjects</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Status</span>
+                            <span class="stat-value">Active</span>
+                        </div>
+                    </div>
+                    <div class="project-click-hint">Click to use →</div>
+                </div>
+                
+                <div class="project-card" onclick="openProject('journal')">
+                    <div class="project-header">
+                        <div class="project-icon">📝</div>
+                        <div class="project-meta">
+                            <h3>Daily Journal System</h3>
+                            <span class="project-status status-active">ACTIVE</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A structured daily logging system for tracking activities, challenges, 
+                        solutions, and reflections. Supports adding new entries and viewing history.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Journal</span>
+                        <span class="tech-tag">Tracking</span>
+                        <span class="tech-tag">Reflection</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-label">Entries</span>
+                            <span class="stat-value" id="projectLogCount">02</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Status</span>
+                            <span class="stat-value">Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="project-click-hint">Click to use →</div>
+                </div>
+                
+                <div class="project-card" onclick="openProject('blog')">
+                    <div class="project-header">
+                        <div class="project-icon">🌐</div>
+                        <div class="project-meta">
+                            <h3>This Blog Portal</h3>
+                            <span class="project-status status-active">ACTIVE</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        The comprehensive blog/portal you're currently viewing! Combines all 
+                        projects into one unified cyberpunk-themed interface with sci-fi styling.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Full Stack</span>
+                        <span class="tech-tag">Integration</span>
+                        <span class="tech-tag">Design</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-label">Sections</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Status</span>
+                            <span class="stat-value">Active</span>
+                        </div>
+                    </div>
+                    <div class="project-click-hint">You're here! →</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="homework">
+            <div class="section-header">
+                <div class="section-title">
+                    <span>▸</span> HOMEWORK HELPER
+                    <div class="section-line"></div>
+                </div>
+            </div>
+            
+            <div class="homework-container">
+                <div class="subject-selector">
+                    <button class="subject-btn" data-subject="math">
+                        <span class="subject-icon">🔢</span>
+                        <span class="subject-name">MATH</span>
+                    </button>
+                    <button class="subject-btn" data-subject="english">
+                        <span class="subject-icon">🌍</span>
+                        <span class="subject-name">ENGLISH</span>
+                    </button>
+                    <div class="subject-dropdown">
+                        <button class="subject-btn dropdown-trigger" data-subject="other">
+                            <span class="subject-icon">🎨</span>
+                            <span class="subject-name">OTHER SUBJECTS</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" data-subject="art">
+                                <span class="dropdown-icon">🎨</span>
+                                <span class="dropdown-text">ART</span>
+                            </button>
+                            <button class="dropdown-item" data-subject="drama">
+                                <span class="dropdown-icon">🎭</span>
+                                <span class="dropdown-text">DRAMA</span>
+                            </button>
+                            <button class="dropdown-item" data-subject="it">
+                                <span class="dropdown-icon">💻</span>
+                                <span class="dropdown-text">IT</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="homework-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <span class="panel-icon" id="subjectIcon">📖</span>
+                            <h3 id="subjectTitle">CHINESE LANGUAGE ASSISTANT</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="homework-content">
+                        <div class="homework-input-section">
+                            <label class="input-label">ENTER YOUR QUESTION</label>
+                            <textarea class="homework-input" id="homeworkInput" 
+                                      placeholder="Type your Chinese, Math, or English question here..."></textarea>
+                            <button class="solve-btn" onclick="solveHomework()">
+                                <span>⚡</span> ANALYZE & SOLVE
+                            </button>
+                        </div>
+                        
+                        <div class="homework-result" id="homeworkResult">
+                            <div class="result-header">
+                                <span class="result-icon">💡</span>
+                                <span class="result-title">SOLUTION & EXPLANATION</span>
+                            </div>
+                            <div class="result-content" id="resultContent">
+                                <p class="placeholder-text">
+                                    Enter a question above and click "ANALYZE & SOLVE" to get help.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-examples">
+                            <div class="examples-title">⚡ QUICK EXAMPLES</div>
+                            <div class="examples-grid" id="examplesGrid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-content">
+                <p>👁️ LISTENER AI INTELLIGENCE HUB © 2026 | SYSTEM VERSION 1.0.0</p>
+                <p class="footer-sub">All Systems Operational | Data stored locally</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="modal" id="addEntryModal">
+        <div class="modal-overlay" onclick="closeAddEntryModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📝 ADD NEW JOURNAL ENTRY</h3>
+                <button class="close-modal" onclick="closeAddEntryModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <label>DATE</label>
+                <input type="date" id="entryDate">
+                <label>TITLE</label>
+                <input type="text" id="entryTitle" placeholder="What happened today?">
+                <label>TAGS (comma separated)</label>
+                <input type="text" id="entryTags" placeholder="e.g., SYSTEM, DESIGN, LEARNING">
+                <label>WHAT DID YOU DO?</label>
+                <textarea id="entryDid" placeholder="Describe what you accomplished today..."></textarea>
+                <label>WHAT CHALLENGES DID YOU FACE?</label>
+                <textarea id="entryChallenges" placeholder="What problems or obstacles did you encounter?"></textarea>
+                <label>HOW DID YOU SOLVE THEM?</label>
+                <textarea id="entrySolution" placeholder="What solutions did you find?"></textarea>
+                <label>REFLECTIONS & THOUGHTS</label>
+                <textarea id="entryReflection" placeholder="What did you learn? Any thoughts for tomorrow?"></textarea>
+                <button class="modal-save-btn" onclick="saveEntry()">SAVE ENTRY</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <h3 id="projectModalTitle">🚀 PROJECT DETAILS</h3>
+                <button class="close-modal" onclick="closeProjectModal()">✕</button>
+            </div>
+            <div class="modal-body" id="projectModalBody">
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
