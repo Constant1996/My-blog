@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模型开源 | LOUIS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <span class="logo-text">LOUIS</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="nav-menu">
+                <a href="about.html" class="nav-item">自我介绍</a>
+                <a href="essay.html" class="nav-item">个人随笔</a>
+                <a href="models.html" class="nav-item active">模型开源</a>
+                <a href="games.html" class="nav-item">游戏建造</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 模型开源
+                </div>
+                <h1 class="page-title">模型开源</h1>
+                <p class="page-subtitle">数字疆域的构筑 · 灵感源自 GrabCAD</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="essay-toolbar">
+                <div class="essay-stats">
+                    <div class="stat-box">
+                        <div class="stat-num">24</div>
+                        <div class="stat-label">个作品</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">5.8K</div>
+                        <div class="stat-label">总下载</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">386</div>
+                        <div class="stat-label">收藏</div>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="openUploadModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    上传新模型
+                </button>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active">全部</button>
+                <button class="filter-tab">角色</button>
+                <button class="filter-tab">场景</button>
+                <button class="filter-tab">道具</button>
+                <button class="filter-tab">建筑</button>
+            </div>
+
+            <div class="sort-bar">
+                <span class="sort-label">排序：</span>
+                <button class="sort-btn active">最新</button>
+                <button class="sort-btn">最热</button>
+                <button class="sort-btn">下载最多</button>
+            </div>
+
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">角色</div>
+                        <h3 class="model-title">科幻机甲战士 v2.0</h3>
+                        <p class="model-desc">全流程制作的科幻机甲，包含高模拓扑、UV拆分、纹理绘制，支持多种格式下载</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">Blender</span>
+                            <span class="meta-tag">Substance</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 1.2K</span>
+                                <span>♥ 256</span>
+                            </div>
+                            <span class="model-date">2026-04-15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#06b6d4,#10b981);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">场景</div>
+                        <h3 class="model-title">赛博朋克城市夜景</h3>
+                        <p class="model-desc">完整的未来城市景观，包含高楼大厦、霓虹灯光、飞行载具，适合游戏或影视使用</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">3ds Max</span>
+                            <span class="meta-tag">V-Ray</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 856</span>
+                                <span>♥ 189</span>
+                            </div>
+                            <span class="model-date">2026-04-10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">道具</div>
+                        <h3 class="model-title">科幻能量步枪</h3>
+                        <p class="model-desc">高精度游戏道具模型，可直接导入Unity或Unreal引擎使用，包含完整的材质贴图</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">Maya</span>
+                            <span class="meta-tag">ZBrush</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 2.1K</span>
+                                <span>♥ 328</span>
+                            </div>
+                            <span class="model-date">2026-04-05</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#8b5cf6,#ec4899);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">角色</div>
+                        <h3 class="model-title">未来战士头盔</h3>
+                        <p class="model-desc">可穿戴的头盔模型，支持3D打印，包含详细的内部结构和LED灯效设计</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">Blender</span>
+                            <span class="meta-tag">3D打印</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 456</span>
+                                <span>♥ 98</span>
+                            </div>
+                            <span class="model-date">2026-03-28</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#10b981,#06b6d4);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">建筑</div>
+                        <h3 class="model-title">未来派住宅楼</h3>
+                        <p class="model-desc">模块化的未来住宅建筑，可以组合成大型社区，包含智能家居系统设计</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">SketchUp</span>
+                            <span class="meta-tag">Lumion</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 312</span>
+                                <span>♥ 67</span>
+                            </div>
+                            <span class="model-date">2026-03-20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-thumb" style="background:linear-gradient(135deg,#ef4444,#f59e0b);">
+                        <div class="model-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">📥</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <div class="model-category">道具</div>
+                        <h3 class="model-title">赛博朋克义肢手臂</h3>
+                        <p class="model-desc">高精度的机械义肢模型，包含可活动关节和液压结构，支持骨骼绑定</p>
+                        <div class="model-meta">
+                            <span class="meta-tag">Blender</span>
+                            <span class="meta-tag">Rigging</span>
+                        </div>
+                        <div class="model-footer">
+                            <div class="model-stats">
+                                <span>↓ 678</span>
+                                <span>♥ 134</span>
+                            </div>
+                            <span class="model-date">2026-03-15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled">上一页</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">下一页</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="uploadModal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeUploadModal()"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>上传新模型</h2>
+                <button class="modal-close" onclick="closeUploadModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">模型名称</label>
+                    <input type="text" class="form-input" placeholder="给你的模型起个名字">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">分类</label>
+                        <select class="form-select">
+                            <option>角色</option>
+                            <option>场景</option>
+                            <option>道具</option>
+                            <option>建筑</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">使用软件</label>
+                        <input type="text" class="form-input" placeholder="如：Blender, Maya, 3ds Max">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">模型描述</label>
+                    <textarea class="form-textarea" rows="4" placeholder="详细描述你的模型，包括格式、面数、是否绑定等"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">模型文件</label>
+                    <div class="upload-area" onclick="document.getElementById('modelInput').click()">
+                        <div class="upload-icon">📁</div>
+                        <p>点击或拖拽上传模型文件</p>
+                        <p style="font-size:0.8rem;color:var(--color-text-tertiary);">支持 .blend, .fbx, .obj, .ma, .max 等格式</p>
+                        <input type="file" id="modelInput" multiple style="display:none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">预览图片</label>
+                    <div class="upload-area" onclick="document.getElementById('previewInput').click()">
+                        <div class="upload-icon">🖼️</div>
+                        <p>上传预览图片（建议至少3张）</p>
+                        <input type="file" id="previewInput" accept="image/*" multiple style="display:none;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeUploadModal()">取消</button>
+                <button class="btn-primary" onclick="submitModel()">发布模型</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">LOUIS</div>
+                <p class="footer-quote">慢慢沉淀，悄悄发光</p>
+                <p class="footer-copyright">© 2026 Louis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .sort-bar {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .sort-label {
+            color: var(--color-text-secondary);
+        }
+        .sort-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: none;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+        .sort-btn:hover,
+        .sort-btn.active {
+            background: rgba(255,255,255,0.1);
+            color: var(--color-text);
+        }
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .model-card {
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+        .model-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-soft);
+            border-color: var(--color-primary);
+        }
+        .model-thumb {
+            aspect-ratio: 4/3;
+            position: relative;
+            overflow: hidden;
+        }
+        .model-actions {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            display: flex;
+            gap: 0.5rem;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .model-card:hover .model-actions {
+            opacity: 1;
+        }
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform var(--transition-fast);
+        }
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
+        .model-info {
+            padding: 1.5rem;
+        }
+        .model-category {
+            font-size: 0.75rem;
+            color: var(--color-primary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .model-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .model-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .model-meta {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .model-meta .meta-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--color-text-tertiary);
+        }
+        .model-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .model-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+        }
+        .model-date {
+            font-size: 0.8rem;
+            color: var(--color-text-tertiary);
+        }
+        .nav-item.active {
+            color: var(--color-text);
+        }
+        .nav-item.active::after {
+            width: 100%;
+        }
+        @media (max-width: 968px) {
+            .models-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+        }
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+        }
+        function submitModel() {
+            alert('模型上传成功！（演示功能）');
+            closeUploadModal();
+        }
+    </script>
+</body>
+</html>
