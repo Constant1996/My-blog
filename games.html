@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏建造 | LOUIS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <span class="logo-text">LOUIS</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="nav-menu">
+                <a href="about.html" class="nav-item">自我介绍</a>
+                <a href="essay.html" class="nav-item">个人随笔</a>
+                <a href="models.html" class="nav-item">模型开源</a>
+                <a href="games.html" class="nav-item active">游戏建造</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 游戏建造
+                </div>
+                <h1 class="page-title">游戏建造</h1>
+                <p class="page-subtitle">闯入异次元的入口 · 灵感源自 Poki</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="essay-toolbar">
+                <div class="essay-stats">
+                    <div class="stat-box">
+                        <div class="stat-num">10</div>
+                        <div class="stat-label">款游戏</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">15.2K</div>
+                        <div class="stat-label">总游玩</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">4.7</div>
+                        <div class="stat-label">平均评分</div>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="openUploadModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    上传新游戏
+                </button>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active">全部</button>
+                <button class="filter-tab">休闲</button>
+                <button class="filter-tab">街机</button>
+                <button class="filter-tab">益智</button>
+                <button class="filter-tab">动作</button>
+            </div>
+
+            <div class="featured-game">
+                <div class="featured-thumb" style="background:linear-gradient(135deg,#10b981,#059669);">
+                    <div class="featured-badge">⭐ 推荐</div>
+                    <button class="featured-play">立即游玩</button>
+                </div>
+                <div class="featured-info">
+                    <div class="game-category">休闲</div>
+                    <h2 class="featured-title">星际贪吃蛇 重制版</h2>
+                    <p class="featured-desc">经典贪吃蛇的科幻重制版！在浩瀚宇宙中控制你的飞船，收集能量宝石，躲避陨石障碍。加入了多种道具系统和排行榜功能，让怀旧游戏焕发全新活力！</p>
+                    <div class="featured-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">🎮</span>
+                            <span>HTML5 Canvas</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">▶️</span>
+                            <span>5,234 次游玩</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">⭐</span>
+                            <span>4.9 分</span>
+                        </div>
+                    </div>
+                    <div class="featured-tags">
+                        <span class="game-tag">单人</span>
+                        <span class="game-tag">排行榜</span>
+                        <span class="game-tag">存档</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#f59e0b,#d97706);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                        <div class="game-badge">热门</div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">街机</div>
+                        <h3 class="game-title">赛博打砖块</h3>
+                        <p class="game-desc">带有多种道具和特效的经典打砖块游戏，赛博朋克风格画面</p>
+                        <div class="game-tech">HTML5 Canvas + JavaScript</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 3,456</span>
+                                <span>⭐ 4.7</span>
+                            </div>
+                            <span class="game-date">2026-04-12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#8b5cf6,#6366f1);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">益智</div>
+                        <h3 class="game-title">数字迷阵</h3>
+                        <p class="game-desc">烧脑的数字拼图游戏，通过移动方块让数字相加达到目标值</p>
+                        <div class="game-tech">Vue.js + Canvas</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 2,189</span>
+                                <span>⭐ 4.6</span>
+                            </div>
+                            <span class="game-date">2026-04-08</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#ef4444,#dc2626);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                        <div class="game-badge">新</div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">动作</div>
+                        <h3 class="game-title">像素跑酷</h3>
+                        <p class="game-desc">复古像素风格的无尽跑酷游戏，跳跃、滑动、躲避障碍</p>
+                        <div class="game-tech">Phaser.js</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 1,856</span>
+                                <span>⭐ 4.8</span>
+                            </div>
+                            <span class="game-date">2026-04-05</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">休闲</div>
+                        <h3 class="game-title">太空消消乐</h3>
+                        <p class="game-desc">太空主题的三消游戏，匹配相同颜色的宝石获得高分</p>
+                        <div class="game-tech">React + Canvas</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 1,234</span>
+                                <span>⭐ 4.5</span>
+                            </div>
+                            <span class="game-date">2026-03-28</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#10b981,#059669);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">益智</div>
+                        <h3 class="game-title">记忆翻牌</h3>
+                        <p class="game-desc">锻炼记忆力的配对游戏，翻开卡片找到相同的图案</p>
+                        <div class="game-tech">纯 JavaScript</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 890</span>
+                                <span>⭐ 4.4</span>
+                            </div>
+                            <span class="game-date">2026-03-20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-thumb" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
+                        <div class="game-overlay">
+                            <button class="game-play-btn">立即游玩</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-category">街机</div>
+                        <h3 class="game-title">太空侵略者</h3>
+                        <p class="game-desc">经典射击游戏的现代重制版，保卫地球抵御外星入侵</p>
+                        <div class="game-tech">HTML5 Canvas</div>
+                        <div class="game-footer">
+                            <div class="game-stats">
+                                <span>▶ 756</span>
+                                <span>⭐ 4.6</span>
+                            </div>
+                            <span class="game-date">2026-03-15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled">上一页</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">下一页</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="uploadModal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeUploadModal()"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>上传新游戏</h2>
+                <button class="modal-close" onclick="closeUploadModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">游戏名称</label>
+                    <input type="text" class="form-input" placeholder="给你的游戏起个名字">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">分类</label>
+                        <select class="form-select">
+                            <option>休闲</option>
+                            <option>街机</option>
+                            <option>益智</option>
+                            <option>动作</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">技术栈</label>
+                        <input type="text" class="form-input" placeholder="如：HTML5 Canvas, Phaser, Unity">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">游戏描述</label>
+                    <textarea class="form-textarea" rows="4" placeholder="介绍一下你的游戏，包括玩法、特点等"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">游戏文件</label>
+                    <div class="upload-area" onclick="document.getElementById('gameInput').click()">
+                        <div class="upload-icon">🎮</div>
+                        <p>点击或拖拽上传游戏文件</p>
+                        <p style="font-size:0.8rem;color:var(--color-text-tertiary);">上传 index.html 或压缩包，确保可以直接运行</p>
+                        <input type="file" id="gameInput" multiple style="display:none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">游戏截图</label>
+                    <div class="upload-area" onclick="document.getElementById('screenshotInput').click()">
+                        <div class="upload-icon">📸</div>
+                        <p>上传游戏截图（建议至少3张）</p>
+                        <input type="file" id="screenshotInput" accept="image/*" multiple style="display:none;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeUploadModal()">取消</button>
+                <button class="btn-primary" onclick="submitGame()">发布游戏</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">LOUIS</div>
+                <p class="footer-quote">慢慢沉淀，悄悄发光</p>
+                <p class="footer-copyright">© 2026 Louis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .featured-game {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+        .featured-thumb {
+            aspect-ratio: 16/9;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .featured-play {
+            padding: 1rem 2.5rem;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: var(--radius-md);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform var(--transition-base);
+        }
+        .featured-play:hover {
+            transform: scale(1.05);
+        }
+        .featured-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .game-category {
+            font-size: 0.75rem;
+            color: var(--color-accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .featured-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .featured-desc {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .featured-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        .meta-icon {
+            font-size: 1.1rem;
+        }
+        .featured-tags {
+            display: flex;
+            gap: 0.75rem;
+        }
+        .game-tag {
+            padding: 0.35rem 0.85rem;
+            background: rgba(255,255,255,0.08);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .game-card {
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-soft);
+        }
+        .game-thumb {
+            aspect-ratio: 16/9;
+            position: relative;
+            overflow: hidden;
+        }
+        .game-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .game-card:hover .game-overlay {
+            opacity: 1;
+        }
+        .game-play-btn {
+            padding: 0.75rem 1.75rem;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: var(--radius-md);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transform: scale(0.9);
+            transition: transform var(--transition-base);
+        }
+        .game-play-btn:hover {
+            transform: scale(1);
+        }
+        .game-badge {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            padding: 0.35rem 0.75rem;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .game-info {
+            padding: 1.5rem;
+        }
+        .game-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .game-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        .game-tech {
+            font-size: 0.8rem;
+            color: var(--color-text-tertiary);
+            margin-bottom: 1rem;
+        }
+        .game-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .game-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+        }
+        .game-date {
+            font-size: 0.8rem;
+            color: var(--color-text-tertiary);
+        }
+        .nav-item.active {
+            color: var(--color-text);
+        }
+        .nav-item.active::after {
+            width: 100%;
+        }
+        @media (max-width: 968px) {
+            .featured-game {
+                grid-template-columns: 1fr;
+            }
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+        }
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+        }
+        function submitGame() {
+            alert('游戏上传成功！（演示功能）');
+            closeUploadModal();
+        }
+    </script>
+</body>
+</html>
