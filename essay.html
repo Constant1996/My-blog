@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人随笔 | LOUIS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <span class="logo-text">LOUIS</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="nav-menu">
+                <a href="about.html" class="nav-item">自我介绍</a>
+                <a href="essay.html" class="nav-item active">个人随笔</a>
+                <a href="models.html" class="nav-item">模型开源</a>
+                <a href="games.html" class="nav-item">游戏建造</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 个人随笔
+                </div>
+                <h1 class="page-title">个人随笔</h1>
+                <p class="page-subtitle">记录思想的轨迹</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="essay-toolbar">
+                <div class="essay-stats">
+                    <div class="stat-box">
+                        <div class="stat-num">12</div>
+                        <div class="stat-label">篇文章</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">3,580</div>
+                        <div class="stat-label">总阅读</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">156</div>
+                        <div class="stat-label">条评论</div>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="openUploadModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    发布新随笔
+                </button>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active">全部</button>
+                <button class="filter-tab">生活</button>
+                <button class="filter-tab">学习</button>
+                <button class="filter-tab">技术</button>
+                <button class="filter-tab">思考</button>
+            </div>
+
+            <div class="essay-list">
+                <article class="essay-item featured">
+                    <div class="essay-badge">置顶</div>
+                    <div class="essay-date">2026-04-18</div>
+                    <h2 class="essay-title">霓虹织满深港天际线</h2>
+                    <p class="essay-excerpt">霓虹织满深港天际线，代码与数据流在指尖流淌 —— 我是扎根深圳的高中生，也是游走在虚拟与现实边界的赛博少年。运动是我对抗重力的本能，游戏是我闯入异次元的入口...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">生活</span>
+                        <span class="meta-info">阅读 328</span>
+                        <span class="meta-info">评论 18</span>
+                    </div>
+                </article>
+
+                <article class="essay-item">
+                    <div class="essay-date">2026-04-15</div>
+                    <h2 class="essay-title">第一次完成机甲建模的心路历程</h2>
+                    <p class="essay-excerpt">花了整整一周，终于把这个科幻机甲做出来了。从最初的概念草图，到3D软件里的每一个多边形，每一步都像是在孕育一个新生命。Blender的多边形建模、Substance Painter的纹理绘制...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">技术</span>
+                        <span class="meta-info">阅读 256</span>
+                        <span class="meta-info">评论 12</span>
+                    </div>
+                </article>
+
+                <article class="essay-item">
+                    <div class="essay-date">2026-04-10</div>
+                    <h2 class="essay-title">深圳的春天，代码与篮球</h2>
+                    <p class="essay-excerpt">深圳的春天总是来得特别早。周末的上午，先去球场打两个小时篮球，让汗水尽情挥洒；下午回到家，打开电脑，沉浸在代码和3D建模的世界里。这就是我理想中的生活...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">生活</span>
+                        <span class="meta-info">阅读 189</span>
+                        <span class="meta-info">评论 9</span>
+                    </div>
+                </article>
+
+                <article class="essay-item">
+                    <div class="essay-date">2026-04-05</div>
+                    <h2 class="essay-title">学习Unity的第一周：踩坑与成长</h2>
+                    <p class="essay-excerpt">终于开始学习Unity了！之前一直用Blender做建模，现在想把自己的作品变成可以互动的游戏。第一周光是配置环境就踩了无数坑，但当第一个小球在屏幕上动起来的时候，那种成就感是无法形容的...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">技术</span>
+                        <span class="meta-info">阅读 412</span>
+                        <span class="meta-info">评论 31</span>
+                    </div>
+                </article>
+
+                <article class="essay-item">
+                    <div class="essay-date">2026-04-01</div>
+                    <h2 class="essay-title">关于未来的一些思考</h2>
+                    <p class="essay-excerpt">最近经常在想，十年后的我会是什么样子？是继续在建模和编程的道路上走下去，还是会有其他的可能性？不管怎样，我知道现在的每一步努力都不会白费。慢慢沉淀，悄悄发光...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">思考</span>
+                        <span class="meta-info">阅读 567</span>
+                        <span class="meta-info">评论 45</span>
+                    </div>
+                </article>
+
+                <article class="essay-item">
+                    <div class="essay-date">2026-03-28</div>
+                    <h2 class="essay-title">篮球赛夺冠！团队的力量</h2>
+                    <p class="essay-excerpt">今天学校篮球赛决赛，我们班赢了！最后30秒还是平分，我接到队友的传球，三分线外果断出手，球进了！那一刻整个球场都沸腾了。这就是团队运动的魅力，不是一个人的表演，而是一群人的战斗...</p>
+                    <div class="essay-meta">
+                        <span class="meta-tag">生活</span>
+                        <span class="meta-info">阅读 723</span>
+                        <span class="meta-info">评论 28</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled">上一页</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">下一页</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="uploadModal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeUploadModal()"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>发布新随笔</h2>
+                <button class="modal-close" onclick="closeUploadModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">文章标题</label>
+                    <input type="text" class="form-input" placeholder="输入一个吸引人的标题">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">分类</label>
+                    <select class="form-select">
+                        <option>生活</option>
+                        <option>学习</option>
+                        <option>技术</option>
+                        <option>思考</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">文章内容</label>
+                    <textarea class="form-textarea" rows="12" placeholder="写下你的想法..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">封面图片（可选）</label>
+                    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                        <div class="upload-icon">📷</div>
+                        <p>点击或拖拽上传图片</p>
+                        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeUploadModal()">取消</button>
+                <button class="btn-primary" onclick="submitEssay()">发布文章</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">LOUIS</div>
+                <p class="footer-quote">慢慢沉淀，悄悄发光</p>
+                <p class="footer-copyright">© 2026 Louis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .essay-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .essay-stats {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 1rem 1.5rem;
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+        .stat-num {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: white;
+        }
+        .essay-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .essay-item {
+            padding: 2rem;
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            position: relative;
+        }
+        .essay-item:hover {
+            transform: translateX(8px);
+            border-color: var(--color-primary);
+        }
+        .essay-item.featured {
+            border-color: var(--color-primary);
+            background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0.02) 100%);
+        }
+        .essay-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--gradient-primary);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .essay-date {
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+            margin-bottom: 0.75rem;
+        }
+        .essay-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .essay-excerpt {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .essay-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .meta-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(59,130,246,0.15);
+            color: var(--color-primary-light);
+            border-radius: 100px;
+            font-size: 0.8rem;
+        }
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        .page-btn {
+            padding: 0.75rem 1.25rem;
+            background: var(--gradient-glass);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+        }
+        .page-btn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .modal-content.large {
+            max-width: 700px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-surface-2);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            color: var(--color-text);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color var(--transition-fast);
+        }
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--color-primary);
+        }
+        .form-textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+        .upload-area {
+            padding: 3rem;
+            background: var(--color-surface-2);
+            border: 2px dashed var(--color-border);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .upload-area:hover {
+            border-color: var(--color-primary);
+            background: rgba(59,130,246,0.05);
+        }
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .nav-item.active {
+            color: var(--color-text);
+        }
+        .nav-item.active::after {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .essay-toolbar {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: stretch;
+            }
+            .essay-stats {
+                justify-content: space-between;
+            }
+            .filter-tabs {
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+        }
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+        }
+        function submitEssay() {
+            alert('文章发布成功！（演示功能）');
+            closeUploadModal();
+        }
+    </script>
+</body>
+</html>
